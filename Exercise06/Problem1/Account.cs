@@ -9,17 +9,23 @@ namespace Problem1
     public class Account
     {
         int money;
-        public Account(int amount)
+        public Account(string id,int amount)
         {
             money = amount;
-
+           
+          
         }
-        public void Withdraw(int amount)
+        public void Withdraw()
         {
+            Console.WriteLine("Please insert money you want to Withdraw");
+            int amount = int.Parse(Console.ReadLine());  
             money -= amount;
+            
         }
-        public void Deposit(int amount)
+        public void Deposit()
         {
+            Console.WriteLine("Please insert money you want to Deposit");
+            int amount = int.Parse(Console.ReadLine());
             money += amount;
         }
         public int Balance()
